@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<!-- SETUP BOOTSTAP: link to Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<!-- link to JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>EXERCISE 1</title>
+</head>
+<body>
+
+	<div class="header">
+		<h1><b><span style="color:yellowgreen;">Howl's Moving Castle:</span> <span style="color:orange;"> Calcifer's Converter</span></b></h1>
+	</div>
+
+	<!-- IMG: ROBOT -->
+		
+		<img class="img-fluid mt-5" src="c1.png" alt="calcifer">
+
+		<div class="container">
+			<h2>Greetings, whoever you are. <br>
+			I am <b>Calcifer</b>, here to aid in your Math Conversion.</h2>
+			<p><span style="color:orange;">Don't mess with me! or Howl will get you.</span></p>
+		</div>
+
+		<div class="container1 mt-5">
+			<h2><b>Here it is, now go have fun.</b></h2>
+			<hr>
+
+			<!-- Form -->
+		<form action="">
+
+		<label for="height"><span style="color:orange;">A Value:</span></label>
+		<input type="text" class="form-control" name="height" id="a-value">
+
+		<label for="height"><span style="color:orange;">B Value:</span></label>
+		<input type="text" class="form-control" name="width" id="b-value">
+
+		<br>
+		
+		</form>
+
+
+		<!-- ANSWER: Round -->
+		<h3 id="round">A</h3>
+		<h3 id="round2">B</h3>
+
+		<!-- JS: ROUND -->
+		<script type="text/javascript">
+
+	function round() {
+		var a = document.getElementById("a-value").value;
+		// window.alert (Math.round(a));
+		document.getElementById('round').innerHTML = "A = " + Math.round(a); 
+		var b = document.getElementById("b-value").value;
+		// window.alert (Math.round(a));
+		document.getElementById('round2').innerHTML = "B = " + Math.round(b);
+	}
+	</script>
+
+	<!-- Button for round -->
+	<button type="button" class="btn btn-info text-muted" onClick="window.location.reload()">Refresh</button>
+
+	  <button type="button" class="btn btn-info text-muted" onClick="round()">Round</button>
+
+
+
+	  <!-- ANSWER: Power -->
+	  <h3 class="mt-5" id="pow">Power</h3>
+
+		<script type="text/javascript">
+
+			function pow() {
+		var a = document.getElementById("a-value").value;
+		// window.alert (Math.round(a));
+		var b = document.getElementById("b-value").value;
+		document.getElementById('pow').innerHTML = "Returns = " + Math.pow(a,b); 
+	}
+
+	</script>
+
+	<!-- Button for exponent -->
+
+	  <button type="button" class="btn btn-info text-muted" onClick="pow()" >A raised to B</button>
+
+
+
+	  <!-- ANSWER: Remainder -->
+	  <h3 class="mt-5" id="sqrt">A</h3>
+	  <h3 id="sqrt2">B</h3>
+
+		<script type="text/javascript">
+
+			function sqrt() {
+		var a = document.getElementById("a-value").value;
+		// window.alert (Math.round(a));
+		document.getElementById('sqrt').innerHTML = "A = " + Math.sqrt(a); 
+		var b = document.getElementById("b-value").value;
+		document.getElementById('sqrt2').innerHTML = "B = " + Math.sqrt(b); 
+	}
+		
+
+	
+	</script>
+
+	<!-- Button for remainder -->
+
+	  <button type="button" class="btn btn-info text-muted" onClick="sqrt()" >Squareroot</button>
+
+
+
+	  	<!-- ANSWER: Equality -->
+	  <h3 class="mt-5" id="abs">A</h3>
+	  <h3 id="abs2">B</h3>
+
+		<script type="text/javascript">
+
+			function abs() {
+		var a = document.getElementById("a-value").value;
+		// window.alert (Math.round(a));
+		document.getElementById('abs').innerHTML = "A = " + Math.abs(a); 
+		var b = document.getElementById("b-value").value;
+		document.getElementById('abs2').innerHTML = "B = " + Math.abs(b); 
+	}
+		
+	</script>
+
+	<!-- Button for Absolute -->
+
+	  <button type="button" class="btn btn-info text-muted" onClick="abs()" >Absolute</button>
+
+
+		</div>
+		
+
+			<!-- Footer -->
+			<center>
+			<footer class="animate__animated animate__bounceIn mt-5"><b><a href="https://frangun.github.io/2Q-EX2_Dela-Cruz-F./">Franzeska Dela Cruz | 9-Emerald</a></footer>
+  			</center>
+  			<br>
+
+
+
+
+	<!-- JS NOTES: 4Q -->
+	<script type="text/javascript">
+		window.alert(Math.method(number));
+
+		// MATH METHODS
+
+		window.alert(Math.round(3.14)); // rounds a number to the nearest integer
+
+		window.alert(Math.pow(x,y)); // Returns the value of x to the power of y (ex. 1 raised to 3 = 1)
+
+		window.alert(Math.sqrt(x)); // returns square root of x (ex. math.sqrt(144) / 12)
+
+		window.alert(Math.abs(x)); // returns the absolute (positive) value of x (ex. -100, once absolute is applied, it will become +100)
+
+		window.alert(Math.min(x)); // lowest value in arguments (ex. 5,2,-5,12 = returns -5)
+
+		window.alert(Math.max(x)); // highest value in arguments (ex. 7,23,-7,32 = returns 32)
+
+		window.alert(Math.random(x)); // returns a random number between 0 (inclusive) to 1(exclusive)
+
+		window.alert(Math.round(Math.round() * 10)); // returns a random number between 0 (inclusive) to 10(exclusive)
+
+		// EXERCISE
+
+		window.alert(Math.abs(-100) * Math.pow (3,2)); 
+		// This is equal to 900 since -100 = 100 multiplied by 3 raised to 2 = 9. 
+
+	</script>
+
+</body>
+</html>
